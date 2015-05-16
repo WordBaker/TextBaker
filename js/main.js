@@ -41,7 +41,7 @@ var pindex = 0, ptotal = Pages.length;
 function slidep(offset) {
 	pindex = Math.min(Math.max(pindex + offset, 0), ptotal - 1);
 
-	document.querySelector('#pagination').innerHTML = "Page" + (pindex + 1)
+	document.querySelector('#pagination').innerHTML = "Page " + (pindex + 1)
 			+ ' / ' + ptotal;
 
 	pr.setAttribute('data-state', pindex === 0 ? 'disabled' : '');
