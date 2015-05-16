@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>TextBaker</title>
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=0">
+		<link rel="stylesheet" href="css/skeleton.css">
+		<style>
+			small{
+				font-weight: 200;
+				font-size: 0.4em;
+				text-transform: uppercase;
+				letter-spacing: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div style="margin-top: 10%">
+					<h2>
+						<strong>TextBaker</strong> 
+						<small>by WordBaker</small>
+					</h2>
+					<h4>Quiz Generator
+						<button class="button-primary u-pull-right">+ Import from .txt</button></h4>
+					<p>
+						Use <code>[</code>…<code>]</code> to include content you want to <strong>cover up</strong> as a question<br/>
+						Use <code>(</code>…<code>)</code> to write <strong>explanations</strong> (generally synonyms or Chinese), content inside will automatically <strong>formatted as smaller text</strong><br/>
+						Use <code>↵enter/return</code> key to break a line into <strong>two paragraphs</strong>, use <strong>two</strong> <code>↵enter/return</code> to break the content into <strong>two pages</strong><br/>
+					</p>
+					<form action="index.php" method="post" autocomplete="off">
+						<div class="row">
+							<div class="five columns">
+								<label for="teaaser">Teaser (Small Introductory Title)</label>
+								<input name="Teaser"class="u-full-width" type="text" placeholder="Unit Info (e.g. Unit 1 - Things we like doing)" id="teaser">
+							</div>
+							<div class="seven columns">
+								<label for="title">Title (Big Main title)</label>
+								<input name="title"class="u-full-width" type="text" placeholder="e.g. An unusual hobby" id="title">
+							</div>
+						</div>
+						<input id='file'name='file'  type="hidden" value="123">
+						<label for="passage">Passage</label>
+						<textarea name="passage"class="twelve columns" placeholder="Julie Baker is 16 and Australian. She likes music, swimming, going to the cinema and [hanging out] with friends. She's a very normal [16-year-old]. But she has an unusual hobby: flying helicopters…" id="passage"></textarea>
+						<input class="button-primary" id="open" type="submit" value="Open in a New Tab &rarr;">
+						<input class="button" id="save" type="button" value="Save as .txt">
+					</form>
+					
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	 <script src="js/jquery.min.js"></script>
+	 <script>$('#save').click(function() {
+	$('#file')[0].value=456;
+	$('#open').click();
+	$('#file')[0].value=123;
+});
+</script>
+</html>
