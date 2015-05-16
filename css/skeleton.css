@@ -30,6 +30,7 @@
 /* Normalize
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
  html {font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}body {margin: 0;}article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {display: block;}audio, canvas, progress, video {display: inline-block;vertical-align: baseline;}audio:not([controls]) {display: none;height: 0;}[hidden], template {display: none;}a {background-color: transparent;}a:active, a:hover {outline: 0;}abbr[title] {border-bottom: 1px dotted;}b, strong {font-weight: bold;}dfn {font-style: italic;}h1 {font-size: 2em;margin: 0.67em 0;}mark {background: #ff0;color: #000;}small {font-size: 80%;}sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}sup {top: -0.5em;}sub {bottom: -0.25em;}img {border: 0;}svg:not(:root) {overflow: hidden;}figure {margin: 1em 40px;}hr {-moz-box-sizing: content-box;box-sizing: content-box;height: 0;}pre {overflow: auto;}code, kbd, pre, samp {font-family: monospace, monospace;font-size: 1em;}button, input, optgroup, select, textarea {color: inherit;font: inherit;margin: 0;}button {overflow: visible;}button, select {text-transform: none;}button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance: button;cursor: pointer;}button[disabled], html input[disabled] {cursor: default;}button::-moz-focus-inner, input::-moz-focus-inner {border: 0;padding: 0;}input {line-height: normal;}input[type="checkbox"], input[type="radio"] {box-sizing: border-box;padding: 0;}input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {height: auto;}input[type="search"] {-webkit-appearance: textfield;-moz-box-sizing: content-box;-webkit-box-sizing: content-box;box-sizing: content-box;}input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}fieldset {border: 1px solid #c0c0c0;margin: 0 2px;padding: 0.35em 0.625em 0.75em;}legend {border: 0;padding: 0;}textarea {overflow: auto;}optgroup {font-weight: bold;}table {border-collapse: collapse;border-spacing: 0;}td, th {padding: 0;}
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -128,7 +129,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Segoe UI", HelveticaNeue, 思源黑体, "思源黑体 CN", "思源黑体 SC", NotoSansCJKsc, NotoSansCJK, SourceHanSansSC, SourceHanSansCN, SourceHansSans, Calibri, Verdana,MicrosoftYaHei, 微软雅黑, MicrosoftYaHeiUI, Arial, STXihei, 华文细黑, STHeiti, 华文黑体, 黑体, sans-serif;
+  font-family: "Segoe UI", HelveticaNeue, 思源黑体, "思源黑体 CN", "思源黑体 SC", NotoSansCJKsc, NotoSansCJK, SourceHanSansSC, SourceHanSansCN, SourceHansSans, Calibri, Verdana, MicrosoftYaHei, 微软雅黑, MicrosoftYaHeiUI, Arial, STXihei, 华文细黑, STHeiti, 华文黑体, 黑体, sans-serif;
   color: #222; }
 
 
@@ -173,6 +174,7 @@ a:hover {
 button,
 input[type="submit"],
 input[type="reset"],
+input[type="file"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
@@ -198,11 +200,13 @@ input[type="button"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
+input[type="file"]:hover,
 input[type="button"]:hover,
 .button:focus,
 button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
+input[type="file"]:focus,
 input[type="button"]:focus {
   color: #333;
   border-color: #888;
@@ -211,6 +215,7 @@ input[type="button"]:focus {
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
+input[type="file"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
   background-color: #33C3F0;
@@ -219,11 +224,13 @@ input[type="button"].button-primary {
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
+input[type="file"].button-primary:hover,
 input[type="button"].button-primary:hover,
 .button.button-primary:focus,
 button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
+input[type="file"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
@@ -232,6 +239,7 @@ input[type="button"].button-primary:focus {
 button.button-white,
 input[type="submit"].button-white,
 input[type="reset"].button-white,
+input[type="file"].button-white,
 input[type="button"].button-white {
   color: #FFF;
   background-color: #29BB9C;
@@ -240,11 +248,13 @@ input[type="button"].button-white {
 button.button-white:hover,
 input[type="submit"].button-white:hover,
 input[type="reset"].button-white:hover,
+input[type="file"].button-white:hover,
 input[type="button"].button-white:hover,
 .button.button-white:focus,
 button.button-white:focus,
 input[type="submit"].button-white:focus,
 input[type="reset"].button-white:focus,
+input[type="file"].button-white:focus,
 input[type="button"].button-white:focus {
   color: #29BB9C;
   background-color: #FFF;
@@ -253,6 +263,7 @@ input[type="button"].button-white:focus {
 button.button-link,
 input[type="submit"].button-link,
 input[type="reset"].button-link,
+input[type="file"].button-link,
 input[type="button"].button-link {
   color: #FFF;
   background-color: none;
@@ -261,11 +272,13 @@ input[type="button"].button-link {
 button.button-link:hover,
 input[type="submit"].button-link:hover,
 input[type="reset"].button-link:hover,
+input[type="file"].button-link:hover,
 input[type="button"].button-link:hover,
 .button.button-link:focus,
 button.button-link:focus,
 input[type="submit"].button-link:focus,
 input[type="reset"].button-link:focus,
+input[type="file"].button-link:focus,
 input[type="button"].button-link:focus {
   color: #FFF;
   background-color: none;
