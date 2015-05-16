@@ -27,8 +27,10 @@ function generate($gTeaser, $gtitle, $gpassage) {
 		$pages = explode ( "\r\n\r\n", $gpassage );
 		//echo json_encode ( $pages );
 		foreach ( $pages as $passage ) {
-			$passage = str_replace ( '(', '<small>', $passage );
-			$passage = str_replace ( ')', '</small>', $passage );
+			$passage = str_replace ( '(', '<small>(', $passage );
+			$passage = str_replace ( '（', '<small>(', $passage );
+			$passage = str_replace ( ')', ')</small>', $passage );
+			$passage = str_replace ( '）', ')</small>', $passage );
 			$passage = str_replace ( '[', '<span class="reveal">', $passage );
 			$passage = str_replace ( ']', '</span>', $passage );
 			$passage = str_replace ( "\n", '<br>', $passage );
