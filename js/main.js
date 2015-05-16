@@ -14,19 +14,29 @@ $.getJSON('sendtext.php', function(data) {
 
 // ////////////////////////////basic paging logic to demo the buttons
 
-var wr = document.querySelector('#preword.paginate.left');
-var wl = document.querySelector('#nxtword.paginate.right');
+var wl = document.querySelector('#preword.paginate.left');
+var wr = document.querySelector('#nxtword.paginate.right');
 
-wr.onclick = slide.bind(this, -1);
-wl.onclick = slide.bind(this, 1);
+wl.onclick = slide.bind(this, -1);
+wr.onclick = slide.bind(this, 1);
 
 function slide(offset) {
+	if (index == total - 1 && offset == 1) {
+		index = 0;
+		$('#nxtpage').click();
+	}
+	if ((index == -1) && (offset ==-1)) {
+		
+		$('#prepage').click();
+	}
+	
 	index = Math.min(Math.max(index + offset, -1), total - 1);
 
 	document.querySelector('#wordsta').innerHTML = (index + 1) + ' / ' + total;
-
-	wr.setAttribute('data-state', index === -1 ? 'disabled' : '');
-	wl.setAttribute('data-state', index === total - 1 ? 'disabled' : '');
+//if (index==-1&&pindex==0){wl.setAttribute('data-state', 'disabled');}
+	wl.setAttribute('data-state', index === -1&&pindex===0 ? 'disabled' : '');
+	wr.setAttribute('data-state', index === total-1&&pindex===ptotal-1  ? 'disabled' : '');
+	//if (index==total-1){$("#nxtpage").click();}
 }
 slide(0);
 // /////////////////////////////
@@ -51,7 +61,8 @@ function slidep(offset) {
 // /////////////////////////////
 
 $("#nxtword").click(function() {
-	$($(".reveal")[index]).fadeTo(200, 1)
+	$($(".reveal")[index]).fadeTo(200, 1);
+	
 });
 
 $("#preword").click(function() {
@@ -65,8 +76,7 @@ $("#nxtpage").click(function() {
 		reset();
 	});
 
-	$("#dynamicarea").fadeTo(200, 1);
-	reset();
+	
 });
 $("#prepage").click(function() {
 	$("#dynamicarea").fadeTo(200, 0, function() {
@@ -102,10 +112,9 @@ $('.reveal').click(function() {
 	slide(0);
 });
 }
-function reset() {
-	slide(-index - 1);
+function reset() {index=-1;
 	 total = $(".reveal").length;
-	 slide(0);
+	 document.querySelector('#wordsta').innerHTML = (index + 1) + ' / ' + total;
 	$(".reveal").each(function() {
 		$(this).fadeTo(0, 0);
 	})
