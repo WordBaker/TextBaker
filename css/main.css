@@ -70,24 +70,7 @@
 			.footeralign {
 				margin-top: 20px; 
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
 			<!-- 前后按钮 -->
 body {}
 button.paginate {
@@ -101,12 +84,12 @@ button.paginate {
   cursor: pointer;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  top: 50%;
+  top: 0;
   margin-top: -20px;
   -webkit-filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.2)); }
   .paginate i {
     position: absolute;
-    top: 40%;
+    top: 0;
     left: 0;
     width: 30px;
     height: 4px;
