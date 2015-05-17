@@ -1,201 +1,248 @@
 @CHARSET "UTF-8";
-
-			html,body {
-				height: 100%;
-				background-color: #34495E;
-				color: #fff;
-			}
-			.site-wrapper {
-				min-height: 100%;
-				height: 100%;
-				display: table;
-			}
-			.site-wrapper-inner {
-				display: table-cell;
-				vertical-align: middle;
-			}
-			.content {
-				padding-top: 50px;
-				padding-bottom: 100px;
-			}
-			.controls {
-				position: fixed;
-				bottom: 0;
-				text-align: center;
-				height: 90px;
-				z-index: 2;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			.controls-background {
-				position: fixed;
-				bottom: 0;
-				height: 80px;
-				width: 100%;
-				background-color: #29BB9C;
-				opacity: 0.95;
-				z-index: 1;
-			}
-			#dynamicarea > p {
-				font-size: 3em;
-				padding: 24px 0;
-			}
-			#dynamicarea > h1 {
-				font-weight: bold;
-			}
-			small {
-				font-size: 0.6em;
-				color: rgba(255,255,255,0.7);
-				position: relative;
-				bottom: 5px;
-			}
-			#dynamicarea > p > span {
-				background-color:rgba(255,255,255,1);
-				border-bottom: 1px solid #fff;
-				transition: background-color 0.5s ease-in-out;
-				-moz-transition:background-color 0.5s ease-in-out;
-				-webkit-transition:background-color 0.5s ease-in-out;
-			}
-			#dynamicarea > p > span.reveal {
-				background-color:rgba(255,255,255,0.1);
-			}
-			button {
-				margin: 0 2px;
-			}
-			button.pagination {
-				padding-left: 15px;
-				padding-right: 15px;
-				font-size: 30px;
-			}
-			.footeralign {
-				margin-top: 20px; 
-			}
-
-			<!-- 前后按钮 -->
-body {}
+html,body {
+	height: 100%;
+	background-color: #34495E;
+	color: #fff;
+}
+.content {
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.controls {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	height: 90px;
+	z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
+}
+.controls-background {
+	position: fixed;
+	bottom: 0;
+	height: 80px;
+	width: 100%;
+	background-color: #29BB9C;
+	opacity: 0.95;
+	z-index: 1;
+}
+#dynamicarea > p {
+	font-size: 3em;
+	padding: 24px 0;
+}
+#dynamicarea > h1 {
+	font-weight: bold;
+}
+small {
+	font-size: 0.6em;
+	color: rgba(255,255,255,0.7);
+	position: relative;
+	bottom: 5px;
+}
+#dynamicarea > p > span {
+	background-color:rgba(255,255,255,1);
+	border-bottom: 1px solid #fff;
+	transition: background-color 0.5s ease-in-out;
+	-moz-transition:background-color 0.5s ease-in-out;
+	-webkit-transition:background-color 0.5s ease-in-out;
+}
+#dynamicarea > p > span.reveal {
+	background-color:rgba(255,255,255,0.1);
+}
+button {
+	margin: 0 2px;
+}
+button.pagination {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 30px;
+}
+.footeralign {
+	margin-top: 20px;
+}
+<!-- 前后按钮 --> body {
+}
 button.paginate {
-  -webkit-appearance: none;
-  border: 0; }
-
+	-webkit-appearance: none;
+	border: 0;
+}
 .paginate {
-  position: static;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  top: 0;
-  margin-top: -20px;
-  -webkit-filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.2)); }
-  .paginate i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 4px;
-    border-radius: 2.5px;
-    background: #fff;
-    transition: all 0.15s ease; }
-  .paginate.left {
-    margin-right: 75px; }
-    .paginate.left i {
-      -webkit-transform-origin: 0% 50%;
-          -ms-transform-origin: 0% 50%;
-              transform-origin: 0% 50%; }
-    .paginate.left i:first-child {
-      -webkit-transform: translate(0, -1px) rotate(40deg);
-          -ms-transform: translate(0, -1px) rotate(40deg);
-              transform: translate(0, -1px) rotate(40deg); }
-    .paginate.left i:last-child {
-      -webkit-transform: translate(0, 1px) rotate(-40deg);
-          -ms-transform: translate(0, 1px) rotate(-40deg);
-              transform: translate(0, 1px) rotate(-40deg); }
-    .paginate.left:hover i:first-child {
-      -webkit-transform: translate(0, -1px) rotate(30deg);
-          -ms-transform: translate(0, -1px) rotate(30deg);
-              transform: translate(0, -1px) rotate(30deg); }
-    .paginate.left:hover i:last-child {
-      -webkit-transform: translate(0, 1px) rotate(-30deg);
-          -ms-transform: translate(0, 1px) rotate(-30deg);
-              transform: translate(0, 1px) rotate(-30deg); }
-    .paginate.left:active i:first-child {
-      -webkit-transform: translate(1px, -1px) rotate(25deg);
-          -ms-transform: translate(1px, -1px) rotate(25deg);
-              transform: translate(1px, -1px) rotate(25deg); }
-    .paginate.left:active i:last-child {
-      -webkit-transform: translate(1px, 1px) rotate(-25deg);
-          -ms-transform: translate(1px, 1px) rotate(-25deg);
-              transform: translate(1px, 1px) rotate(-25deg); }
-    .paginate.left[data-state=disabled] i:first-child {
-      -webkit-transform: translate(-5px, 0) rotate(0deg);
-          -ms-transform: translate(-5px, 0) rotate(0deg);
-              transform: translate(-5px, 0) rotate(0deg); }
-    .paginate.left[data-state=disabled] i:last-child {
-      -webkit-transform: translate(-5px, -0) rotate(-0deg);
-          -ms-transform: translate(-5px, -0) rotate(-0deg);
-              transform: translate(-5px, -0) rotate(-0deg); }
-    .paginate.left[data-state=disabled]:hover i:first-child {
-      -webkit-transform: translate(-5px, 0) rotate(0deg);
-          -ms-transform: translate(-5px, 0) rotate(0deg);
-              transform: translate(-5px, 0) rotate(0deg); }
-    .paginate.left[data-state=disabled]:hover i:last-child {
-      -webkit-transform: translate(-5px, -0) rotate(-0deg);
-          -ms-transform: translate(-5px, -0) rotate(-0deg);
-              transform: translate(-5px, -0) rotate(-0deg); }
-    .paginate.right i {
-      -webkit-transform-origin: 100% 50%;
-          -ms-transform-origin: 100% 50%;
-              transform-origin: 100% 50%; }
-    .paginate.right i:first-child {
-      -webkit-transform: translate(0, 1px) rotate(40deg);
-          -ms-transform: translate(0, 1px) rotate(40deg);
-              transform: translate(0, 1px) rotate(40deg); }
-    .paginate.right i:last-child {
-      -webkit-transform: translate(0, -1px) rotate(-40deg);
-          -ms-transform: translate(0, -1px) rotate(-40deg);
-              transform: translate(0, -1px) rotate(-40deg); }
-    .paginate.right:hover i:first-child {
-      -webkit-transform: translate(0, 1px) rotate(30deg);
-          -ms-transform: translate(0, 1px) rotate(30deg);
-              transform: translate(0, 1px) rotate(30deg); }
-    .paginate.right:hover i:last-child {
-      -webkit-transform: translate(0, -1px) rotate(-30deg);
-          -ms-transform: translate(0, -1px) rotate(-30deg);
-              transform: translate(0, -1px) rotate(-30deg); }
-    .paginate.right:active i:first-child {
-      -webkit-transform: translate(1px, 1px) rotate(25deg);
-          -ms-transform: translate(1px, 1px) rotate(25deg);
-              transform: translate(1px, 1px) rotate(25deg); }
-    .paginate.right:active i:last-child {
-      -webkit-transform: translate(1px, -1px) rotate(-25deg);
-          -ms-transform: translate(1px, -1px) rotate(-25deg);
-              transform: translate(1px, -1px) rotate(-25deg); }
-    .paginate.right[data-state=disabled] i:first-child {
-      -webkit-transform: translate(5px, 0) rotate(0deg);
-          -ms-transform: translate(5px, 0) rotate(0deg);
-              transform: translate(5px, 0) rotate(0deg); }
-    .paginate.right[data-state=disabled] i:last-child {
-      -webkit-transform: translate(5px, -0) rotate(-0deg);
-          -ms-transform: translate(5px, -0) rotate(-0deg);
-              transform: translate(5px, -0) rotate(-0deg); }
-    .paginate.right[data-state=disabled]:hover i:first-child {
-      -webkit-transform: translate(5px, 0) rotate(0deg);
-          -ms-transform: translate(5px, 0) rotate(0deg);
-              transform: translate(5px, 0) rotate(0deg); }
-    .paginate.right[data-state=disabled]:hover i:last-child {
-      -webkit-transform: translate(5px, -0) rotate(-0deg);
-          -ms-transform: translate(5px, -0) rotate(-0deg);
-              transform: translate(5px, -0) rotate(-0deg); }
-  .paginate[data-state=disabled] {
-    opacity: 0.3;
-    cursor: default; }
-
+	position: static;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	top: 0;
+	margin-top: -20px;
+	-webkit-filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.2));
+}
+.paginate i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 4px;
+	border-radius: 2.5px;
+	background: #fff;
+	transition: all 0.15s ease;
+}
+.paginate.left {
+	margin-right: 75px;
+}
+.paginate.left i {
+	-webkit-transform-origin: 0% 50%;
+	-ms-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+.paginate.left i:first-child {
+	-webkit-transform: translate(0, -1px) rotate(40deg);
+	-ms-transform: translate(0, -1px) rotate(40deg);
+	transform: translate(0, -1px) rotate(40deg);
+}
+.paginate.left i:last-child {
+	-webkit-transform: translate(0, 1px) rotate(-40deg);
+	-ms-transform: translate(0, 1px) rotate(-40deg);
+	transform: translate(0, 1px) rotate(-40deg);
+}
+.paginate.left:hover i:first-child {
+	-webkit-transform: translate(0, -1px) rotate(30deg);
+	-ms-transform: translate(0, -1px) rotate(30deg);
+	transform: translate(0, -1px) rotate(30deg);
+}
+.paginate.left:hover i:last-child {
+	-webkit-transform: translate(0, 1px) rotate(-30deg);
+	-ms-transform: translate(0, 1px) rotate(-30deg);
+	transform: translate(0, 1px) rotate(-30deg);
+}
+.paginate.left:active i:first-child {
+	-webkit-transform: translate(1px, -1px) rotate(25deg);
+	-ms-transform: translate(1px, -1px) rotate(25deg);
+	transform: translate(1px, -1px) rotate(25deg);
+}
+.paginate.left:active i:last-child {
+	-webkit-transform: translate(1px, 1px) rotate(-25deg);
+	-ms-transform: translate(1px, 1px) rotate(-25deg);
+	transform: translate(1px, 1px) rotate(-25deg);
+}
+.paginate.left[data-state=disabled] i:first-child {
+	-webkit-transform: translate(-5px, 0) rotate(0deg);
+	-ms-transform: translate(-5px, 0) rotate(0deg);
+	transform: translate(-5px, 0) rotate(0deg);
+}
+.paginate.left[data-state=disabled] i:last-child {
+	-webkit-transform: translate(-5px, -0) rotate(-0deg);
+	-ms-transform: translate(-5px, -0) rotate(-0deg);
+	transform: translate(-5px, -0) rotate(-0deg);
+}
+.paginate.left[data-state=disabled]:hover i:first-child {
+	-webkit-transform: translate(-5px, 0) rotate(0deg);
+	-ms-transform: translate(-5px, 0) rotate(0deg);
+	transform: translate(-5px, 0) rotate(0deg);
+}
+.paginate.left[data-state=disabled]:hover i:last-child {
+	-webkit-transform: translate(-5px, -0) rotate(-0deg);
+	-ms-transform: translate(-5px, -0) rotate(-0deg);
+	transform: translate(-5px, -0) rotate(-0deg);
+}
+.paginate.right i {
+	-webkit-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+}
+.paginate.right i:first-child {
+	-webkit-transform: translate(0, 1px) rotate(40deg);
+	-ms-transform: translate(0, 1px) rotate(40deg);
+	transform: translate(0, 1px) rotate(40deg);
+}
+.paginate.right i:last-child {
+	-webkit-transform: translate(0, -1px) rotate(-40deg);
+	-ms-transform: translate(0, -1px) rotate(-40deg);
+	transform: translate(0, -1px) rotate(-40deg);
+}
+.paginate.right:hover i:first-child {
+	-webkit-transform: translate(0, 1px) rotate(30deg);
+	-ms-transform: translate(0, 1px) rotate(30deg);
+	transform: translate(0, 1px) rotate(30deg);
+}
+.paginate.right:hover i:last-child {
+	-webkit-transform: translate(0, -1px) rotate(-30deg);
+	-ms-transform: translate(0, -1px) rotate(-30deg);
+	transform: translate(0, -1px) rotate(-30deg);
+}
+.paginate.right:active i:first-child {
+	-webkit-transform: translate(1px, 1px) rotate(25deg);
+	-ms-transform: translate(1px, 1px) rotate(25deg);
+	transform: translate(1px, 1px) rotate(25deg);
+}
+.paginate.right:active i:last-child {
+	-webkit-transform: translate(1px, -1px) rotate(-25deg);
+	-ms-transform: translate(1px, -1px) rotate(-25deg);
+	transform: translate(1px, -1px) rotate(-25deg);
+}
+.paginate.right[data-state=disabled] i:first-child {
+	-webkit-transform: translate(5px, 0) rotate(0deg);
+	-ms-transform: translate(5px, 0) rotate(0deg);
+	transform: translate(5px, 0) rotate(0deg);
+}
+.paginate.right[data-state=disabled] i:last-child {
+	-webkit-transform: translate(5px, -0) rotate(-0deg);
+	-ms-transform: translate(5px, -0) rotate(-0deg);
+	transform: translate(5px, -0) rotate(-0deg);
+}
+.paginate.right[data-state=disabled]:hover i:first-child {
+	-webkit-transform: translate(5px, 0) rotate(0deg);
+	-ms-transform: translate(5px, 0) rotate(0deg);
+	transform: translate(5px, 0) rotate(0deg);
+}
+.paginate.right[data-state=disabled]:hover i:last-child {
+	-webkit-transform: translate(5px, -0) rotate(-0deg);
+	-ms-transform: translate(5px, -0) rotate(-0deg);
+	transform: translate(5px, -0) rotate(-0deg);
+}
+.paginate[data-state=disabled] {
+	opacity: 0.3;
+	cursor: default;
+}
 .counter {
-  text-align: center;
-  position: relative;
-  top: 24px;
-  right: 13px;
-  width: 100%;
-  font-size: 30px;
-  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
-  color: #fff; }
+	text-align: center;
+	position: relative;
+	top: 24px;
+	right: 13px;
+	width: 100%;
+	font-size: 30px;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+/* Larger than mobile */
+@media (max-width: 750px) {
+	 #showall, #resetall {
+		 display: none;
+	 }
+}
+
+@media (min-width: 400px) {
+	#dynamicarea > p {
+		font-size: 1.2em;
+		padding: 24px 0;
+	}
+	small {
+		bottom: 2px;
+	}
+}
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+	#dynamicarea > p {
+		font-size: 3em;
+		padding: 24px 0;
+	}
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}
